@@ -129,6 +129,7 @@ namespace BadJokes.Controllers
             return View(joke);
         }
 
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Joke == null)
